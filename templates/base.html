@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{% block title %}Personal Data Manager{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Sign out</a>
+        {% endif %}
+    </nav>
+    <main>{% block main %}{% endblock %}</main>
+</body>
+</html>

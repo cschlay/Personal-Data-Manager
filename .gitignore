@@ -1,6 +1,11 @@
 __init__.py
 
+# Virtual  Environments
 venv_lin/
 venv_w10/
 
+# IDEs
 .idea/
+
+# Files generated for testing.
+*.sqlite3
