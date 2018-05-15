@@ -2,4 +2,11 @@
 
 {% block main %}
 
+<!-- Show the accounts and their balance or a button to open the creation form. -->
+{% if accounts.exists %}
+
+{% else %}
+    <button>New Account</button>
+{% endif %}
+
 {% endblock %}

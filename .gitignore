@@ -9,3 +9,6 @@ venv_w10/
 
 # Files generated for testing.
 *.sqlite3
+
+# Third-party
+bootstrap.css
