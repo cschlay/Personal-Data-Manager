@@ -16,11 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from apps import lobby, budget
+
 urlpatterns = [
     # Administration
     path('admin/', admin.site.urls),
-    path('', include('django.contrib.auth.urls')),
     # Root addresses
-    path('', include('apps.lobby.urls'))
+    path('', include('django.contrib.auth.urls')),
+    path('', include('apps.lobby.urls')),
+    path('', lobby.views.index, name = 'index'),
     # Budget App
+    path('budget/', include('apps.budget.urls')),
+    path('budget/', budget.views.budget, name = 'budget'),
+    path('budget/new-account/', budget.views.new_account, name='new_account')
+
 ]

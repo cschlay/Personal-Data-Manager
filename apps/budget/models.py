@@ -7,6 +7,7 @@ class Revenue(models.Model):
     amount  = models.IntegerField()
     comment = models.CharField(max_length = 50, null = True)
 
+
 class Account(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     account_name = models.CharField(max_length = 20, null = True)

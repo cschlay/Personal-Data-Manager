@@ -1,8 +1,7 @@
 __init__.py
 
 # Virtual  Environments
-venv_lin/
-venv_w10/
+venv/
 
 # IDEs
 .idea/
