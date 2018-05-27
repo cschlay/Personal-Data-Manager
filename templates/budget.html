@@ -1,2 +1,30 @@
 {% extends 'base.html' %}
 
+{% block main %}
+<h1>Revenue</h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Amount (&#128;)</th>
+        <th>Comment</th>
+    </tr>
+    {% for record in revenues %}
+    <tr>
+        <td>{{ record.date }}</td>
+        <td>{{ record.amount }}</td>
+        <td>{{ record.comment }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<form method="post" action="{% url 'budget:add-income' %}">
+    {% csrf_token %}
+    <input type="date" name="date">
+    <input type="text" name="amount">
+    <input type="text" name="comment">
+
+    <input type="submit" value="Add">
+</form>
+
+<h1>Spendings</h1>
+{% endblock %}

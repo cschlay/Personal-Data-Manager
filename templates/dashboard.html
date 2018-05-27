@@ -3,36 +3,6 @@
 {% block main %}
 
 <!-- Show the accounts and their balance or a button to open the creation form. -->
-{% if accounts is not None %}
-
-{% else %}
-    <button type="button" data-toggle="modal" data-target="#new-account-form">New Account</button>
-
-    <div class="modal fade" id="new-account-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Account</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <form method="post "action ="{% url 'new_account'%}">
-                    {% csrf_token %}
-                    <div class="modal-body">
-                        Name:
-                        <input type="text" name="name">
-                        Initial Balance:
-                        <input type="number" name="default-balance">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <input class="button" type="submit" class="btn btn-primary" value="Create">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-{% endif %}
+{{ accounts.id }}
 
 {% endblock %}
