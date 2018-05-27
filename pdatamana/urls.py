@@ -28,6 +28,4 @@ urlpatterns = [
     # Budget App
     path('budget/', include('apps.budget.urls')),
     path('budget/', budget.views.budget, name = 'budget'),
-    path('budget/new-account/', budget.views.new_account, name='new_account')
-
 ]
