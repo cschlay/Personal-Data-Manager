@@ -24,8 +24,8 @@ urlpatterns = [
     # Root addresses
     path('', include('django.contrib.auth.urls')),
     path('', include('apps.lobby.urls')),
-    path('', lobby.views.index, name = 'index'),
+    path('', lobby.views.index, name='index'),
     # Budget App
     path('budget/', include('apps.budget.urls')),
-    path('budget/', budget.views.budget, name = 'budget'),
+    path('budget/', budget.views.budget, name='budget'),
 ]
