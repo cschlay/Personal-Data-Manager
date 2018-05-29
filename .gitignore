@@ -6,8 +6,12 @@ venv/
 # IDEs
 .idea/
 
-# Files generated for testing.
+# Generated files.
 *.sqlite3
+*.pyc
+migrations/
 
-# Third-party
+# Third-party-libraries
 bootstrap.css
+bootstrap.js
+jquery-3.3.1.slim.min.js

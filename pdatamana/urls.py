@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from apps import lobby, budget
+from apps import lobby, budget, library
 
 urlpatterns = [
     # Administration
@@ -28,4 +28,7 @@ urlpatterns = [
     # Budget App
     path('budget/', include('apps.budget.urls')),
     path('budget/', budget.views.budget, name='budget'),
+    # Library App
+    path('library/', include('apps.library.urls')),
+    path('library/', library.views.index, name='library')
 ]

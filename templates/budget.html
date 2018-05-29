@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block link-id %}budget{% endblock %}
 {% block main %}
 
 <div class="container">
@@ -47,7 +48,7 @@
                     <span class="input-group-append input-group-text">&#128;</span>
                 </div>
                 <input type="text" class="form-control" placeholder="comments" name="comment">
-                <input type="submit" class="form-control" value="Add">
+                <input type="submit" class="form-control btn btn-primary" value="Add">
             </form>
         </div>
     </div>

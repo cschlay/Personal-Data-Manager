@@ -1,0 +1,9 @@
+a {
+    color: #1c4966;
+}
+
+.active-link {
+    color: #35661c;
+    text-decoration: underline;
+}
+
