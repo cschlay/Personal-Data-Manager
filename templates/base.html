@@ -25,7 +25,22 @@
         </div>
         <a href="{% url 'logout' %}">Sign out</a>
     </nav>
-    <main>{% block main %}{% endblock %}</main>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <main>{% block main %}{% endblock %}</main>
+            </div>
+        </div>
+
+        <!-- Command-line Interface -->
+        <div class="fixed-bottom">
+            <form method="post" action="{% url 'cli:cli' %}">
+                {% csrf_token %}
+            <input type="text" class="form-control cli" placeholder="Command-line Interface" name="command">
+            </form>
+        </div>
+    </div>
 
     <script>
         var active = document.getElementById("{% block link-id %}{% endblock %}");

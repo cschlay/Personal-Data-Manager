@@ -7,3 +7,20 @@ a {
     text-decoration: underline;
 }
 
+.cli {
+    background-color: black;
+    color: lightgreen;
+    font-family: courier;
+    opacity: 0.8;
+
+    border-radius: 0;
+}
+
+.cli:focus{
+    background-color: black;
+    color: lightgreen;
+    font-family: courier;
+    opacity: 0.8;
+
+    box-shadow: none;
+}

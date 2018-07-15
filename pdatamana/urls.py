@@ -30,5 +30,7 @@ urlpatterns = [
     path('budget/', budget.views.budget, name='budget'),
     # Library App
     path('library/', include('apps.library.urls')),
-    path('library/', library.views.index, name='library')
+    path('library/', library.views.index, name='library'),
+    # Terminal App
+    path('cli/', include('apps.cli.urls')),
 ]

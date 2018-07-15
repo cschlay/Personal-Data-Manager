@@ -14,3 +14,7 @@ class Spending(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.IntegerField()
     comment = models.CharField(max_length=50, null=True)
+
+
+class Category(models.Model):
+    value = models.CharField(max_length=50)

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'apps.budget',
     'apps.lobby',
     'apps.library',
+    'apps.cli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
