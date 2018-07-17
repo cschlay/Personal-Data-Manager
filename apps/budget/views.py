@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from apps.budget.models import Revenue, Spending
+from apps.budget.models import Revenue, Spending, Category
 
 
 def budget(request):
@@ -36,19 +36,23 @@ def submit(request):
     a = request.POST['amount']
     a = a[:len(a)-3] + a[len(a)-2:]
 
+    print(request.POST['date'])
+
     if a[0] == '-':
         record = Spending(
             user=request.user,
             date=request.POST['date'],
             amount=int(a),
-            comment=request.POST['comment']
+            category=Category.objects.get(id=request.POST['category']),
+            description=request.POST['description']
         )
     else:
         record = Revenue(
             user=request.user,
             date=request.POST['date'],
             amount=int(a),
-            comment=request.POST['comment']
+            category=Category.objects.get(id=request.POST['category']),
+            description=request.POST['description']
         )
     record.save()
 

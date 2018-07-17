@@ -12,7 +12,3 @@ venv/
 migrations/
 
 # Third-party-libraries
-bootstrap.css
-bootstrap.js
-jquery-3.3.1.slim.min.js
-bootstrap.min.js

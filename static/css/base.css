@@ -1,26 +1,64 @@
-a {
-    color: #1c4966;
+/* Basic Theme */
+body {
+    background-color: #F3F2F2;
+    color: #1B1A2D;
+    margin: 0;
 }
 
-.active-link {
-    color: #35661c;
-    text-decoration: underline;
+/* Navigation Style */
+#top-navigation {
+    background-color: #281c04;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.cli {
+#top-navigation a {
+    color: white;
+    text-decoration: none;
+
+    display: inline-block;
+    padding: 15px 10px;
+}
+
+#top-navigation .active-link {
+    color: crimson;
+}
+
+.navbar-brand:hover {
+    color: #f9f9ea;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#sign-out {
+    float: right;
+    margin-right: 10px;
+}
+/* The Content Style */
+.content {
+    margin: 75px 10px;
+}
+
+#cli {
+    opacity: 0.8;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#cli input {
     background-color: black;
     color: lightgreen;
     font-family: courier;
-    opacity: 0.8;
 
-    border-radius: 0;
-}
+    border: none;
+    outline: none;
+    padding: 10px;
 
-.cli:focus{
-    background-color: black;
-    color: lightgreen;
-    font-family: courier;
-    opacity: 0.8;
-
-    box-shadow: none;
+    width: 100%;
 }

@@ -2,8 +2,47 @@
 
 {% block link-id %}budget{% endblock %}
 {% block main %}
+<!-- INCOME TABLE -->
+<h1>Income</h1>
+<table class="c table">
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Description</th>
+                </tr>
+                {% for record in revenues %}
+                <tr>
+                    <td>{{ record.date }}</td>
+                    <td>{{ record.amount }}</td>
+                    <td>{{ record.category.value }}</td>
+                    <td>{{ record.description }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        <!-- SPENDINGS TABLE -->
+            <h1>Spendings</h1>
+
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                </tr>
+                {% for record in spendings %}
+                <tr>
+                    <td>{{ record.date }}</td>
+                    <td>{{ record.amount }}</td>
+                    <td>{{ record.category.value }}</td>
+                    <td>{{ record.description }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+<!--
 <div class="row">
-    <div class="col-8">
+    <div class="col-6">
             <h1>Income</h1>
             <table class="table">
                 <tr>
@@ -35,7 +74,7 @@
                 </tr>
                 {% endfor %}
             </table>
-        </div>
+        </div>-->
         <div class="col-4">
             <h2>Add new record</h2>
             <form method="post" action="{% url 'budget:submit' %}">
@@ -45,7 +84,8 @@
                     <input type="text" class="form-control" placeholder="&plusmn; ee,cc" name="amount">
                     <span class="input-group-append input-group-text">&#128;</span>
                 </div>
-                <input type="text" class="form-control" placeholder="comments" name="comment">
+                <input type="number" class="form-control" placeholder="category" name="category">
+                <input type="text" class="form-control" placeholder="description" name="description">
                 <input type="submit" class="form-control btn btn-primary" value="Add">
             </form>
         </div>
