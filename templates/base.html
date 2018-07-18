@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}{% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <title>{% block title %}Personal Data Manager{% endblock %}</title>
 </head>
@@ -12,7 +14,7 @@
 <body>
     {% if user.is_authenticated %}
         <nav id="top-navigation" role="navigation">
-            <a href="{% url 'index' %}">Datamana</a>
+            <a id="brand" href="{% url 'index' %}">Datamana</a>
             <a id="budget" href="{% url 'budget' %}">Budget</a>
             <a href="">Calendar</a>
             <a href="">Keys</a>

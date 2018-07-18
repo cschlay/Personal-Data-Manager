@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/budget.css' %}">
+{% endblock %}
 
 {% block link-id %}budget{% endblock %}
+
 {% block main %}
 <!-- INCOME TABLE -->
 <h1>Income</h1>
@@ -10,86 +15,33 @@
         <th>Amount</th>
         <th>Category</th>
         <th>Description</th>
-                </tr>
-                {% for record in revenues %}
-                <tr>
-                    <td>{{ record.date }}</td>
-                    <td>{{ record.amount }}</td>
-                    <td>{{ record.category.value }}</td>
-                    <td>{{ record.description }}</td>
-                </tr>
-                {% endfor %}
-            </table>
+    </tr>
+    {% for record in revenues %}
+    <tr>
+        <td>{{ record.date }}</td>
+        <td>{{ record.amount }}</td>
+        <td>{{ record.category.value }}</td>
+        <td>{{ record.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
 
-        <!-- SPENDINGS TABLE -->
-            <h1>Spendings</h1>
-
-            <table class="table">
-                <tr>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Category</th>
-                    <th>Description</th>
-                </tr>
-                {% for record in spendings %}
-                <tr>
-                    <td>{{ record.date }}</td>
-                    <td>{{ record.amount }}</td>
-                    <td>{{ record.category.value }}</td>
-                    <td>{{ record.description }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-<!--
-<div class="row">
-    <div class="col-6">
-            <h1>Income</h1>
-            <table class="table">
-                <tr>
-                    <th>Date</th>
-                    <th>Amount (&#128;)</th>
-                    <th>Comment</th>
-                </tr>
-                {% for record in revenues %}
-                <tr>
-                    <td>{{ record.date }}</td>
-                    <td>{{ record.amount }}</td>
-                    <td>{{ record.comment }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-
-            <h1>Spendings</h1>
-            <table class="table">
-                <tr>
-                    <th>Date</th>
-                    <th>Amount (&#128;)</th>
-                    <th>Comment</th>
-                </tr>
-                {% for record in spendings %}
-                <tr>
-                    <td>{{ record.date }}</td>
-                    <td>{{ record.amount }}</td>
-                    <td>{{ record.comment }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>-->
-        <div class="col-4">
-            <h2>Add new record</h2>
-            <form method="post" action="{% url 'budget:submit' %}">
-                {% csrf_token %}
-                <input type="date" class="form-control" name="date">
-                <div class="input-group md-3">
-                    <input type="text" class="form-control" placeholder="&plusmn; ee,cc" name="amount">
-                    <span class="input-group-append input-group-text">&#128;</span>
-                </div>
-                <input type="number" class="form-control" placeholder="category" name="category">
-                <input type="text" class="form-control" placeholder="description" name="description">
-                <input type="submit" class="form-control btn btn-primary" value="Add">
-            </form>
-        </div>
-    </div>
+<!-- SPENDINGS TABLE -->
+<h1>Spendings</h1>
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Description</th>
+    </tr>
+    {% for record in spendings %}
+    <tr>
+        <td>{{ record.date }}</td>
+        <td>{{ record.amount }}</td>
+        <td>{{ record.category.value }}</td>
+        <td>{{ record.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
-
-

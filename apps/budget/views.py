@@ -39,21 +39,20 @@ def submit(request):
     print(request.POST['date'])
 
     if a[0] == '-':
-        record = Spending(
-            user=request.user,
-            date=request.POST['date'],
-            amount=int(a),
-            category=Category.objects.get(id=request.POST['category']),
-            description=request.POST['description']
-        )
+        record = Spending()
     else:
-        record = Revenue(
-            user=request.user,
-            date=request.POST['date'],
-            amount=int(a),
-            category=Category.objects.get(id=request.POST['category']),
-            description=request.POST['description']
-        )
+        record = Revenue()
+
+    record.user = request.user
+    record.date=request.POST['date']
+    record.amount=int(a)
+    record.description = request.POST['description']
+
+    if request.POST['category'] == '':
+        record.category = Category()
+    else:
+        record.category = Category.objects.get(id=request.POST['category'])
+
     record.save()
 
     return redirect('budget')
