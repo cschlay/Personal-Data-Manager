@@ -1,0 +1,12 @@
+.progress-bar-outer {
+    border: solid 1px crimson;
+
+
+    height: 1em;
+    width: 100%;
+}
+
+.progress-bar-inner {
+    background-color: crimson;
+    height: inherit;
+}

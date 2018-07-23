@@ -1,25 +1,44 @@
 /* Basic Theme */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase:400,700');
-
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee');
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee|Reenie+Beanie');
 body {
     background-color: #F3F2F2;
     color: #1B1A2D;
     margin: 0;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.5em;
+}
 
-    font-family: 'Open Sans', sans-serif;
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    margin: 2em 0;
+    width: 100%;
+}
+
+table tr td, tr th {
+    padding: 0.5em 0.5em;
+    text-align: left;
+}
+
+th {
+    border-bottom: solid 1px black;
+    padding-bottom: 0.1em;
 }
 
 /* Navigation Style */
 #brand {
-    font-family: 'Cormorant Unicase', serif;
     font-weight: 700;
     font-size: 1.2em;
-
 }
 
 #top-navigation {
     background-color: #281c04;
+    opacity: 0.8;
+
+    font-family: 'Handlee', cursive;
+    font-size: 0.7em;
 
     position: fixed;
     top: 0;
@@ -35,9 +54,18 @@ body {
     padding-bottom: 5px;
 }
 
+#top-navigation a:hover {
+    color: khaki;
+}
+
 #top-navigation .active-link {
-    color: crimson;
-    border-bottom: solid 2px crimson;
+    color: lightgreen;
+    border-bottom: solid 2px lightgreen;
+}
+
+#top-navigation .active-link:hover {
+    color: lightgreen;
+    border-bottom: solid 2px lightgreen;
 }
 
 .navbar-brand:hover {
@@ -54,7 +82,7 @@ body {
 }
 /* The Content Style */
 .content {
-    margin: 75px 10px;
+    margin: 75px 15px;
 }
 
 #cli {
@@ -76,3 +104,4 @@ body {
 
     width: 100%;
 }
+

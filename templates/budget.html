@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block css %}
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/budget.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/budget.css' %}">
 {% endblock %}
 
 {% block link-id %}budget{% endblock %}
@@ -9,12 +9,12 @@
 {% block main %}
 <!-- INCOME TABLE -->
 <h1>Income</h1>
-<table class="c table">
+<table>
     <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Category</th>
-        <th>Description</th>
+        <th class="date">Date</th>
+        <th class="amount">Amount</th>
+        <th class="category">Category</th>
+        <th class="description">Description</th>
     </tr>
     {% for record in revenues %}
     <tr>
@@ -28,12 +28,12 @@
 
 <!-- SPENDINGS TABLE -->
 <h1>Spendings</h1>
-<table class="table">
+<table>
     <tr>
-        <th>Date</th>
-        <th>Amount</th>
-        <th>Category</th>
-        <th>Description</th>
+        <th class="date">Date</th>
+        <th class="amount">Amount</th>
+        <th class="category">Category</th>
+        <th class="description">Description</th>
     </tr>
     {% for record in spendings %}
     <tr>

@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
 {% block main %}
-
-<!-- Show the accounts and their balance or a button to open the creation form. -->
-{{ accounts.id }}
-
+<!-- Time Until Retirement -->
+<div class="progress-bar-outer">
+    <div class="progress-bar-inner" style="width: {{ time_as_percentage }}%"></div>
+</div>
 {% endblock %}

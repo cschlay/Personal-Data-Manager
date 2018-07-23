@@ -1,10 +1,15 @@
 # Personal Data Manager
 
+
 ## Installation
 Configure the 'settings.py' file. Most importantly, remember to replace the production key.
 
 ### Local Use
 This is intended to be used in local servers. For deploying it online see your hosts' instructions.
+
+
+## Manual
+The user manual is found [here](http://www.cschlay.com/reports/pdatamana.html).
 
 ## License
 The project is licensed under [MIT License](https://opensource.org/licenses/MIT).
