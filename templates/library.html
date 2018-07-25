@@ -1,37 +1,27 @@
 {% extends 'base.html' %}
 
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/library.css' %}">
+{% endblock %}
+
 {% block link-id %}library{% endblock %}
 {% block main %}
-<div class="container-fluid">
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Subtitle</th>
-            <th>Author(s)</th>
-            <th>Edition</th>
-            <th>Read</th>
-        </tr>
+<table>
+    <tr>
+        <th class="title">Title</th>
+        <th class="authors">Author(s)</th>
+        <th>Edition</th>
+        <th>Read</th>
+    </tr>
 
-        {% for book in books %}
-        <tr>
-            <td>{{ book.title }}</td>
-            <td>{{ book.subtitle }}</td>
-            <td>{{ book.author }}</td>
-            <td>{{ book.edition }}</td>
-            <td>{{ book.read }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
-
-<form method="post" action="{% url 'library:submit' %}">
-    {% csrf_token %}
-    <input type="text" placeholder="title" name="title">
-    <input type="text" placeholder="subtitle" name="subtitle">
-    <input type="text" placeholder="authors" name="author">
-    <input type="number" value="1" name="edition">
-    <input type="checkbox" name="read">
-
-    <input type="submit" class="btn btn-primary" value="add">
-</form>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.edition }}</td>
+        <td>{{ book.read }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

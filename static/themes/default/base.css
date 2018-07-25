@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee');
 @import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee|Reenie+Beanie');
 body {
-    background-color: #F3F2F2;
-    color: #1B1A2D;
     margin: 0;
+
+    /* Notebook Effects */
+    background-color: linen;
+    color: #1B1A2D;
     font-family: 'Reenie Beanie', cursive;
     font-size: 1.5em;
 }
@@ -82,7 +84,7 @@ th {
 }
 /* The Content Style */
 .content {
-    margin: 75px 15px;
+    margin: 75px 5%;
 }
 
 #cli {

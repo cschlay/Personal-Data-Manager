@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from apps import lobby, budget, library
+from apps import lobby, budget, library, recipes
 
 urlpatterns = [
     # Administration
@@ -33,4 +33,7 @@ urlpatterns = [
     path('library/', library.views.index, name='library'),
     # Terminal App
     path('cli/', include('apps.cli.urls')),
+    # Recipe App
+    path('recipes/', include('apps.recipes.urls')),
+    path('recipes/', recipes.views.index, name='recipes'),
 ]

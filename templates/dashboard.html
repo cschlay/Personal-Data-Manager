@@ -2,12 +2,29 @@
 
 {% block css %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard.css' %}">
 {% endblock %}
 
 {% block main %}
-<!-- Time Until Retirement -->
+<!-- Time Until Retirement-->
 <div class="progress-bar-outer">
-    <div class="progress-bar-inner" style="width: {{ time_as_percentage }}%"></div>
+    <div class="progress-bar-inner" style="width: {{ time_as_percentage }}%; text-align: center">
+        Hours until retirement: {{ hours_left }}
+    </div>
 </div>
+
+<div>
+    <div>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Due Date</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+
+    </div>
+</div>
+
 {% endblock %}

@@ -19,11 +19,12 @@ def index(request):
 
         # Calculate Hours Consumed.
         hours_consumed = (datetime.now().date() - start_date).days * 24
+        hours_left = total_hours - hours_consumed
 
         # Transform to percentage.
-        time_as_percentage = hours_consumed / total_hours * 100
+        time_as_percentage = (total_hours - hours_consumed) / total_hours * 100
 
-        context = {'user': user, 'time_as_percentage': time_as_percentage}
+        context = {'user': user, 'hours_left': hours_left,'time_as_percentage': time_as_percentage}
 
         return render_to_response('dashboard.html', context)
     else:
