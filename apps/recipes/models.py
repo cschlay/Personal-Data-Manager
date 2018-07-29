@@ -1,8 +1,16 @@
 from django.db import models
 
 
+class Meal(models.Model):
+    """
+    Describes the type of meals such as dinner and breakfast.
+    """
+    name = models.CharField(max_length=50)
+
+
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
+    type = models.ForeignKey(Meal, on_delete=models.CASCADE)
 
 
 class Ingredient(models.Model):
