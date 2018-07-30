@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 
+from apps.budget.api import to_printable_currency
 from apps.budget.models import Revenue, Spending, Category
 
 
@@ -7,22 +8,20 @@ def budget(request):
     user = request.user
 
     revenues = Revenue.objects.filter(user=user).order_by('date')
-    spendings = Spending.objects.filter(user=user).order_by('date')
+    spending = Spending.objects.filter(user=user).order_by('date')
 
     context = {
         'user': user,
         'revenues': reversed(revenues),
-        'spendings': reversed(spendings)
+        'spending': reversed(spending)
     }
 
     # Add the comma to currency.
     for record in revenues:
-        a = str(record.amount)
-        record.amount = a[:len(a)-2] + ',' + a[len(a)-2:]
+        record.amount = to_printable_currency(str(record.amount))
 
-    for record in spendings:
-        a = str(record.amount)
-        record.amount = a[:len(a)-2] + ',' + a[len(a)-2:]
+    for record in spending:
+        record.amount = to_printable_currency(str(record.amount))
 
     return render(request, 'budget.html', context)
 

@@ -1,14 +1,12 @@
 /* Basic Theme */
-@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee');
-@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Handlee|Reenie+Beanie');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
     margin: 0;
 
     /* Notebook Effects */
     background-color: linen;
     color: #1B1A2D;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 table {
@@ -36,11 +34,8 @@ th {
 }
 
 #top-navigation {
-    background-color: #281c04;
+    background-color: black;
     opacity: 0.8;
-
-    font-family: 'Handlee', cursive;
-    font-size: 0.7em;
 
     position: fixed;
     top: 0;
