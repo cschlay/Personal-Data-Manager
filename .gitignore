@@ -17,3 +17,5 @@ migrations/
 *.synctex.gz
 *.pdf
 *.toc
+
+settings_production.py
