@@ -1,0 +1,12 @@
+/* Color Classes */
+.bg-light-shades { background-color: #F9F8F8; }
+.bg-light-accent { background-color: #879190; }
+.bg-main-color { background-color: #9CA5A3; }
+.bg-dark-accent { background-color: #868A90; }
+.bg-dark-shades { background-color: #212A3E; }
+
+.light-shades { color: #F9F8F8; }
+.light-accent { color: #879190; }
+.main-color { color: #9CA5A3; }
+.dark-accent { color: #868A90; }
+.dark-shades { color: #212A3E; }

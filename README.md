@@ -7,7 +7,6 @@ It is possible to modify the software to support multiple users e.g. for family 
 2. Configure the **pdatamana/settings.py**. Remember to replace the production key!
 3. You can set the ```THEME_NAME``` in **settings.py**. 
 4. Deploy the project as you please. See the [official Django instructions](https://docs.djangoproject.com/en/dev/howto/deployment/)
-5. (optional) Modify **pdatamana/db_settings.py** to prepare the initial data and run ```python manage.py db_init``` to add them.
 
 ## Manual
 The user manual is found [here](http://www.cschlay.com/reports/pdatamana.html).

@@ -9,6 +9,21 @@ def index(request):
     return render(request, 'library.html', context)
 
 
+def book(request, book_id):
+    """
+    Individual book page displaying the progress of its exercises if they exists.
+
+    :param book_id:
+    :param request:
+    :return:
+    """
+    context = {
+        'book': Book.objects.get(user=request.user, id=book_id)
+    }
+
+    return render(request, 'book.html', context)
+
+
 def submit(request):
     record = Book(
         user=request.user,

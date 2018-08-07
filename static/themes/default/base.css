@@ -9,6 +9,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+button {
+    border: none;
+    padding: 10px;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;

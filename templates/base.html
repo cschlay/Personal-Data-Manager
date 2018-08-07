@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'colors.css' %}">
     {% block css %}{% endblock %}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <title>{% block title %}Personal Data Manager{% endblock %}</title>
 </head>
 
-<body>
+<body class="bg-dark-shades light-shades">
     {% if user.is_authenticated %}
         <nav id="top-navigation" role="navigation">
             <a id="brand" href="{% url 'index' %}">Datamana</a>
@@ -20,7 +21,7 @@
             <a href="">Keys</a>
             <a id="library" href="{% url 'library' %}">Library</a>
             <a href="">Projects</a>
-            <a href="">Recipes</a>
+            <a id="recipes" href="{% url 'recipes' %}">Recipes</a>
             <a href="">Knowledge</a>
             <a href="">Tasks</a>
             <a id="sign-out" href="{% url 'logout' %}">Sign out</a>

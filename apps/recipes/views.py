@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("RECIPE OK")
+    return render(request, 'recipes.html')
