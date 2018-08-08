@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'colors.css' %}">
     {% block css %}{% endblock %}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <title>{% block title %}Personal Data Manager{% endblock %}</title>
 </head>
 
-<body class="bg-dark-shades light-shades">
+<body>
     {% if user.is_authenticated %}
         <nav id="top-navigation" role="navigation">
             <a id="brand" href="{% url 'index' %}">Datamana</a>
@@ -30,10 +29,10 @@
         <div class="content">{% block main %}{% endblock %}</div>
 
         <!-- Command-line Interface -->
-        <div id="cli">
+        <div id="cli" align="center">
             <form method="post" action="{% url 'cli:cli' %}">
                 {% csrf_token %}
-                <input type="text" placeholder="Command-line Interface" name="command">
+                <input type="text" placeholder="Command-line Interface" name="command" autocomplete="off">
             </form>
         </div>
 

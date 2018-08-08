@@ -3,7 +3,7 @@ from datetime import datetime, date
 from django.shortcuts import redirect, render_to_response
 
 # The actual index.html is never shown in personal use.
-from apps.budget.api import get_monthly_spending, get_monthly_earnings, to_printable_currency
+from apps.budget.functions import get_monthly_spending, get_monthly_earnings, to_printable_currency
 from apps.lobby.models import TimeAllocation
 
 
@@ -26,7 +26,6 @@ def index(request):
         time_as_percentage = (total_hours - hours_consumed) / total_hours * 100
 
         # Calculate money spent this month.
-
 
         context = {
             'user': user,

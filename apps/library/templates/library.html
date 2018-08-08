@@ -7,19 +7,17 @@
 
 {% block link-id %}library{% endblock %}
 {% block main %}
+<form method="POST" id="book-adder"></form>
+
 <table>
     <tr>
-        <th class="title">Title</th>
-        <th class="authors">Author(s)</th>
-        <th>Edition</th>
+        <th class="th-7">Title</th>
         <th>Read</th>
     </tr>
 
     {% for book in books %}
     <tr>
         <td><a href="book/{{ book.id }}">{{ book.title }}</a></td>
-        <td>{{ book.author }}</td>
-        <td>{{ book.edition }}</td>
         <td>{{ book.read }}</td>
     </tr>
     {% endfor %}

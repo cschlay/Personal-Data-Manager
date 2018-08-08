@@ -26,4 +26,7 @@ def get_monthly_earnings():
 
 
 def to_printable_currency(value: str):
-    return value[:len(value) - 2] + ',' + value[len(value) - 2:]
+    if value == '0':
+        return '0'
+    else:
+        return value[:len(value) - 2] + ',' + value[len(value) - 2:]

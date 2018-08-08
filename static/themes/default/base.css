@@ -1,12 +1,30 @@
 /* Basic Theme */
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* ===================
+   || COLOR PALETTE ||
+   ===================
+
+    background color: #0C0C0C
+    text color: #E3E7D3
+    link color: #2C6E7C
+*/
+
+a {
+    color: #66A0AD;
+    text-decoration: none;
+}
+
 body {
     margin: 0;
 
-    /* Notebook Effects */
-    background-color: linen;
-    color: #1B1A2D;
     font-family: 'Montserrat', sans-serif;
+
+    background-color: #0C0C0C;
+    color: #E3E7D3;
+    background-size: 25px 25px;
+    background-image: linear-gradient(to right, #111010 1px, transparent 1px),
+                      linear-gradient(to bottom, #111010 1px, transparent 1px);
 }
 
 button {
@@ -28,8 +46,12 @@ table tr td, tr th {
 }
 
 th {
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px gray;
     padding-bottom: 0.1em;
+}
+
+.th-7 {
+    width: 70%;
 }
 
 /* Navigation Style */
@@ -38,7 +60,10 @@ th {
     font-size: 1.2em;
 }
 
+
 #top-navigation {
+    box-shadow: 0 1px 5px red;
+
     background-color: black;
     opacity: 0.8;
 
@@ -57,17 +82,18 @@ th {
 }
 
 #top-navigation a:hover {
-    color: khaki;
+    color: pink;
 }
 
 #top-navigation .active-link {
-    color: lightgreen;
-    border-bottom: solid 2px lightgreen;
+    color: red;
+    font-weight: bold;
+    border-bottom: solid 2px red;
 }
 
 #top-navigation .active-link:hover {
-    color: lightgreen;
-    border-bottom: solid 2px lightgreen;
+    color: red;
+    border-bottom: solid 2px red;
 }
 
 .navbar-brand:hover {
@@ -90,9 +116,14 @@ th {
 #cli {
     opacity: 0.8;
 
+    background-color: black;
+    border: 1px groove gray;
+
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 95%;
+    margin: 1% 2%;
+    padding: 10px;
 }
 
 #cli input {
@@ -102,8 +133,6 @@ th {
 
     border: none;
     outline: none;
-    padding: 10px;
-
     width: 100%;
+    opacity: 0.8    ;
 }
-

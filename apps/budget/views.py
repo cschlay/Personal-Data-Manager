@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from apps.budget.api import to_printable_currency
+from apps.budget.functions import to_printable_currency
 from apps.budget.models import Revenue, Spending, Category
 
 
