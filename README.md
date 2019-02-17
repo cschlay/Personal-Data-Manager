@@ -1,18 +1,23 @@
 # Personal Data Manager
-A data manager designed and optimized for one user.
-It is possible to modify the software to support multiple users e.g. for family use.
+A data manager is a software used to manage collected data from one's personal life.
+I aim to keep this usable for companies and families.
 
-## Installation
-1. Clone the project ```git clone https://github.com/cschlay/Personal-Data-Manager.git```
-2. Configure the **pdatamana/settings.py**. Remember to replace the production key!
-3. You can set the ```THEME_NAME``` in **settings.py**. 
-4. Deploy the project as you please. See the [official Django instructions](https://docs.djangoproject.com/en/dev/howto/deployment/)
+This is a charity project.
+People like me have concerns for privacy, thus not using commercial products to store data.
 
-## Manual
-The user manual is found [here](http://www.cschlay.com/reports/pdatamana.html).
+I myself use a modified version of this software.
+
+
+## Installation (Linux)
+You should already have Python 3 installed on your machine.
+
+### Local use
+1. Clone the repository
+```git clone https://github.com/cschlay/Personal-Data-Manager.git```
+2. Run the installation script
+```source install.sh```
+
+### Server use
 
 ## License
-The project is licensed under [MIT License](https://opensource.org/licenses/MIT).
-
-## Support
-The requested changes are made only when paid.
+Everything under this repository is in MIT License.
