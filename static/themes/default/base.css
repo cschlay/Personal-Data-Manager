@@ -32,6 +32,10 @@ button {
     padding: 10px;
 }
 
+input {
+    margin: 0.5em;
+}
+
 table {
     border-collapse: collapse;
     table-layout: fixed;

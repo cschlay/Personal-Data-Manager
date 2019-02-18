@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.budget',
-    'apps.lobby',
+    'apps.dashboard',
     'apps.library',
     'apps.cli',
     'apps.recipes',

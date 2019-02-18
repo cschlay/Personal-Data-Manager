@@ -16,18 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from apps import lobby, budget, library, recipes
+from apps import dashboard, budget, library, recipes
 
 urlpatterns = [
     # Administration
     path('admin/', admin.site.urls),
     # Root addresses
     path('', include('django.contrib.auth.urls')),
-    path('', include('apps.lobby.urls')),
-    path('', lobby.views.index, name='index'),
+    path('', include('apps.dashboard.urls')),
     # Budget App
     path('budget/', include('apps.budget.urls')),
-    path('budget/', budget.views.budget, name='budget'),
     # Library App
     path('library/', include('apps.library.urls')),
     path('library/', library.views.index, name='library'),

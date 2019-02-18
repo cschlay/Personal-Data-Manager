@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block main_public %}
-<h1>Personal Data Manager</h1>
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <div>Username: {{ form.username }}</div>
-    <div>Password: {{ form.password }}</div>
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+{% endblock %}
 
-    <div>
-        <input type="submit" class="w3-button w3-teal" value="Sign In">
+{% block main %}
+<div class="login-form">
+    <h1>Personal Data Manager</h1>
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div>Username: {{ form.username }}</div>
+        <div>Password: {{ form.password }}</div>
+
+        <input class="submit-button" type="submit" value="Sign In">
         <input type="hidden" name="next" value="{{ next }}">
-    </div>
-</form>
+    </form>
+</div>
 {% endblock %}

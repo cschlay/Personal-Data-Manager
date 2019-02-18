@@ -4,7 +4,7 @@ from apps.budget.functions import to_printable_currency
 from apps.budget.models import Revenue, Spending, Category
 
 
-def budget(request):
+def index(request):
     user = request.user
 
     revenues = Revenue.objects.filter(user=user).order_by('date')
@@ -23,7 +23,7 @@ def budget(request):
     for record in spending:
         record.amount = to_printable_currency(str(record.amount))
 
-    return render(request, 'budget.html', context)
+    return render(request, 'budget:budget.html', context)
 
 
 def submit(request):

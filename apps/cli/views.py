@@ -17,4 +17,4 @@ def cli(request):
     elif command[0] == 'library':
         return execute(request, command[1:])
 
-    return redirect('library')
+    return redirect(request, 'library')

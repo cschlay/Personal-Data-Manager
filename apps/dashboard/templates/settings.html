@@ -1,0 +1,24 @@
+{% extends 'base_private.html' %}
+
+{% block main %}
+
+<h1>Settings</h1>
+
+{% if message %}
+<p class="error-message">{{ message }}</p>
+{% endif %}
+
+<p>
+    Were you redirected to this page, the system is missing some data.
+</p>
+
+<form action="{% url 'settings' %}" method="post">
+    {% csrf_token %}
+    <h1>Time Allocation</h1>
+    <p>Set the time until retirement. This feature will be made optional.</p>
+
+    StartDate: <input name="start-date" type="date">
+    EndDate: <input name="end-date" type="date">
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

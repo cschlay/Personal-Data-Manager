@@ -15,7 +15,7 @@
     {% if user.is_authenticated %}
         <nav id="top-navigation" role="navigation">
             <a id="brand" href="{% url 'index' %}">Datamana</a>
-            <a id="budget" href="{% url 'budget' %}">Budget</a>
+            <a id="budget" href="{% url 'budget:budget' %}">Budget</a>
             <a href="">Calendar</a>
             <a href="">Keys</a>
             <a id="library" href="{% url 'library' %}">Library</a>
@@ -25,8 +25,6 @@
             <a href="">Tasks</a>
             <a id="sign-out" href="{% url 'logout' %}">Sign out</a>
         </nav>
-
-        <div class="content">{% block main %}{% endblock %}</div>
 
         <!-- Command-line Interface -->
         <div id="cli" align="center">
@@ -42,6 +40,9 @@
             link.classList.add("active-link");
         </script>
     {% else %}
+        <div>
+            {% block main %}{% endblock %}
+        </div>
         <main>{% block main_public %}{% endblock %}</main>
     {% endif %}
 </body>
