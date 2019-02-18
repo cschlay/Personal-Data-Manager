@@ -17,6 +17,4 @@ echo "Create yourself a superuser."
 python3 manage.py createsuperuser
 
 echo "Start the server."
-python3 manage.py runserver &
-sleep 2
-python3 -mwebbrowser http://127.0.0.1:8000
+python3 manage.py runserver

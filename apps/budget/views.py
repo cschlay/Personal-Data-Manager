@@ -23,7 +23,7 @@ def index(request):
     for record in spending:
         record.amount = to_printable_currency(str(record.amount))
 
-    return render(request, 'budget:budget.html', context)
+    return render(request, 'budget.html', context)
 
 
 def submit(request):

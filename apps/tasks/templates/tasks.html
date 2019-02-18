@@ -1,0 +1,21 @@
+{% extends 'base_private.html' %}
+
+{% block link-id %}tasks{% endblock %}
+
+{% block main %}
+<h1>Tasks</h1>
+
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Due Date</th>
+    </tr>
+{% for task in tasks %}
+    <tr>
+        <td>{{ task.description }}</td>
+        <td>{{ task.due_date }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}

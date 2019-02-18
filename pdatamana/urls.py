@@ -34,4 +34,6 @@ urlpatterns = [
     # Recipe App
     path('recipes/', include('apps.recipes.urls')),
     path('recipes/', recipes.views.index, name='recipes'),
+    # Task App
+    path('tasks/', include('apps.tasks.urls'))
 ]
