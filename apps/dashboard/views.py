@@ -54,6 +54,6 @@ def settings(request):
         t.save()
         context['message'] = 'saved'
     else:
-        context['message'] = 'directed'
+        context['message'] = None
 
     return render(request, 'settings.html', context)

@@ -6,9 +6,10 @@ h1 {
     text-align: center;
 }
 
-.submit-button {
-    background-color: ;
-    border: none;
-    border-radius: none;
+.login-button {
+    background-color: #377f91;
+    color: white;
+    margin: 1em;
+    opacity: 100%;
     padding: 0.5em 1em;
 }
