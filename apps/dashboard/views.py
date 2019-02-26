@@ -4,8 +4,10 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
-from apps.budget.functions import to_printable_currency, get_monthly_earnings, get_monthly_spending
+from apps.budget.methods import get_spending, get_income
 from apps.dashboard.models import TimeAllocation
+from apps.tasks.models import Task
+from lib.printer import format_currency
 
 
 def index(request):
@@ -33,10 +35,10 @@ def index(request):
                 'user': user,
                 'hours_left': hours_left,
                 'time_as_percentage': time_as_percentage,
-                'spending': to_printable_currency(str(get_monthly_spending())),
-                'earnings': to_printable_currency(str(get_monthly_earnings()))
+                'spending': format_currency(get_spending(request)),
+                'earnings': format_currency(get_income(request)),
+                'tasks': Task.objects.filter(user=user)
             }
-
             return render(request, 'dashboard.html', context)
         except Exception as e:
             return redirect('settings')

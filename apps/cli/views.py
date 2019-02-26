@@ -1,10 +1,10 @@
 from django.shortcuts import redirect
 
-from apps.cli.functions.budget_functions import budget_functions
 from apps.library.functions import execute
 from lib.parser import split_string_with_delimiter
 
 from apps.tasks import methods as tasks
+from apps.budget import methods as budget
 
 
 def cli(request):
@@ -14,7 +14,7 @@ def cli(request):
         app = command[0]
         args = command[1:]
         if app == 'budget':
-            return budget_functions(request, args)
+            return budget.execute(request, args)
         elif app == 'library':
             return execute(request, args)
         elif command[0] == 'tasks':

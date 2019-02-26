@@ -10,7 +10,7 @@ source $VENV/bin/activate
 pip3 install -r requirements.txt
 
 echo "Initialize the tables."
-python3 manage.py makemigrations budget dashboard cli library recipes
+python3 manage.py makemigrations budget dashboard cli library recipes tasks
 python3 manage.py migrate
 
 echo "Create yourself a superuser."

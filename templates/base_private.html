@@ -21,7 +21,6 @@
         <a id="library" href="{% url 'library' %}">Library</a>
         <a href="">Projects</a>
         <a id="recipes" href="{% url 'recipes' %}">Recipes</a>
-        <a href="">Knowledge</a>
         <a id="tasks" href="{% url 'tasks:tasks' %}">Tasks</a>
         <a id="sign-out" href="{% url 'logout' %}">Sign out</a>
     </nav>
@@ -38,10 +37,9 @@
         </form>
     </div>
 
-    <!-- Sets the active link style.-->
+    <!-- Set the active link style.-->
     <script>
-        var link = document.getElementById("{% block link-id %}{% endblock %}");
-        link.classList.add("active-link");
+        document.getElementById("{% block link-id %}{% endblock %}").classList.add("active-link");
     </script>
     {% else %}
     <h1>Permission denied.</h1>

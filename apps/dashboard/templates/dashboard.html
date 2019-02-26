@@ -16,18 +16,17 @@
 <p>Money spent (this month): {{ spending }} €</p>
 <p>Money earned (this month): {{ earnings }} €</p>
 
-<div>
-    <div>
-        <table>
-            <tr>
-                <th>Task</th>
-                <th>Due Date</th>
-            </tr>
-        </table>
-    </div>
-    <div>
-
-    </div>
-</div>
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Due Time</th>
+    </tr>
+{% for task in tasks %}
+    <tr>
+        <td>{{ task.description }}</td>
+        <td>{{ task.due_time }}</td>
+    </tr>
+{% endfor %}
+</table>
 
 {% endblock %}
