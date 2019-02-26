@@ -8,10 +8,4 @@ def index(request):
     This is the main view of tasks app.
     Everything should be visible on modifiable in this one page.
     """
-    tasks = Task.objects.get(user=request.user.id)
-
-    context = {
-        'tasks': tasks
-    }
-
-    return render(request, 'recipes.html', context)
+    return render(request, 'recipes.html')

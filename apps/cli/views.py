@@ -1,20 +1,23 @@
-# Copyright (c) 2018 C. H. Lay
-# MIT License
-
-
 from django.shortcuts import redirect
 
 from apps.cli.functions.budget_functions import budget_functions
 from apps.library.functions import execute
 from lib.parser import split_string_with_delimiter
 
+from apps.tasks import methods as tasks
+
 
 def cli(request):
-    command = split_string_with_delimiter(request.POST['command'], '\'')
+    if request.method == 'POST':
+        command = split_string_with_delimiter(request.POST['command'], '\'')
 
-    if command[0] == 'budget':
-        return budget_functions(request, command[1:])
-    elif command[0] == 'library':
-        return execute(request, command[1:])
+        app = command[0]
+        args = command[1:]
+        if app == 'budget':
+            return budget_functions(request, args)
+        elif app == 'library':
+            return execute(request, args)
+        elif command[0] == 'tasks':
+            return tasks.execute(request, args)
 
-    return redirect(request, 'library')
+    return redirect('/')

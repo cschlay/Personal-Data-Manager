@@ -2,6 +2,7 @@
 
 % Notexbook -package can be download from my github.
 \usepackage{en-notexbook-full}
+\lstset{basicstyle=\ttfamily}
 
 \title{Personal Data Manager\\ \Large{Documentation}}
 \author{C. H. Lay}
@@ -10,12 +11,27 @@
 \maketitle
 \tableofcontents
 
+\subsection*{Abstract}
+
+
 \section{The Software}
 \term{Personal data manager} is a software developed to manage personal data and finding hidden trends in one's life. The primary function is to store, visualize and process the data.
 
 \section{Budget}
 
-\section{Command Line Interface}
-In this section, we discuss about commands that our software supports in addition to GUI.
-
+\section{Tasks}
+To manage personal tasks we have app named ''tasks'', which is used as follows.
+\begin{lstlisting}
+tasks <command> <arguments>
+\end{lstlisting}
+Adding a task is simple
+\begin{lstlisting}
+tasks new '<description>' '<YYYY-MM-DD HH:MM>'
+\end{lstlisting}
+If you have one-word description, then omit the delimiters.
+Deletion is by id
+\begin{lstlisting}
+tasks rm <id>
+\end{lstlisting}
+\section{References}
 \end{document}

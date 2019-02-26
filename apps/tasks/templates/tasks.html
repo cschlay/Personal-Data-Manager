@@ -7,15 +7,16 @@
 
 <table>
     <tr>
+        <th>ID</th>
         <th>Description</th>
-        <th>Due Date</th>
+        <th>Due Time</th>
     </tr>
 {% for task in tasks %}
     <tr>
+        <td>{{ task.id }}</td>
         <td>{{ task.description }}</td>
-        <td>{{ task.due_date }}</td>
+        <td>{{ task.due_time }}</td>
     </tr>
 {% endfor %}
 </table>
-
 {% endblock %}

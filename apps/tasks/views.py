@@ -1,5 +1,10 @@
 from django.shortcuts import render
 
+from apps.tasks.models import Task
+
 
 def index(request):
-    return render(request, 'tasks.html')
+    context = {
+        'tasks': Task.objects.filter(user=request.user)
+    }
+    return render(request, 'tasks.html', context)

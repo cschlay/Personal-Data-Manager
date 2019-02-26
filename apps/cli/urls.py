@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'cli'
 urlpatterns = [
-    path('cli/', views.cli, name='cli'),
+    path('', views.cli, name='cli'),
 
 
 ]
