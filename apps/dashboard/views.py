@@ -3,7 +3,6 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 
 
-# Create your views here.
 from apps.budget.methods import get_spending, get_income
 from apps.dashboard.models import TimeAllocation
 from apps.tasks.models import Task
@@ -36,11 +35,12 @@ def index(request):
                 'hours_left': hours_left,
                 'time_as_percentage': time_as_percentage,
                 'spending': format_currency(get_spending(request)),
-                'earnings': format_currency(get_income(request)),
-                'tasks': Task.objects.filter(user=user)
+                'income': format_currency(get_income(request)),
+                'tasks': Task.objects.filter(user=user).order_by('due_time')
             }
             return render(request, 'dashboard.html', context)
         except Exception as e:
+            print(e)
             return redirect('settings')
     else:
         return redirect('login')

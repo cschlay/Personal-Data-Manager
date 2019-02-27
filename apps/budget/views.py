@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect
 
+from apps.budget.models import Income
 from lib.printer import format_currency
 
 
 def index(request):
     user = request.user
+    context = {
+        'income': Income.objects.filter(user=user)
+    }
+    for x in context['income']:
+        x.amount = format_currency(x.amount)
 
-    return render(request, 'budget.html')
+    return render(request, 'budget.html', context)
 
 
 """

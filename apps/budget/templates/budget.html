@@ -13,15 +13,13 @@
     <tr>
         <th class="date">Date</th>
         <th class="amount">Amount</th>
-        <th class="category">Category</th>
-        <th class="description">Description</th>
+        <th class="category">Source</th>
     </tr>
-    {% for record in revenues %}
+    {% for record in income %}
     <tr>
         <td>{{ record.date }}</td>
-        <td>{{ record.amount }}</td>
-        <td>{{ record.category.value }}</td>
-        <td>{{ record.description }}</td>
+        <td>{{ record.amount }} &euro;</td>
+        <td>{{ record.type.name }}</td>
     </tr>
     {% endfor %}
 </table>

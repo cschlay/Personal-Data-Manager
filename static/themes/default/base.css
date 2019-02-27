@@ -138,5 +138,9 @@ th {
     border: none;
     outline: none;
     width: 100%;
-    opacity: 0.8    ;
+    opacity: 0.8;
+}
+
+.time {
+    font-family: 'courier', monospace;
 }

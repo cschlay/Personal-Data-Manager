@@ -1,14 +1,6 @@
-# MIT License
-# Copyright (c) 2018 C. H. Lay
-
-
 def split_string_with_delimiter(string: str, delimiter: str) -> [str]:
     """
     Splits a string based on spaces but keeps the spaces inside the delimiters.
-
-    :param string: to split
-    :param delimiter: could be any str sequence
-    :return:
     """
 
     tokens = string.split()
@@ -28,3 +20,10 @@ def split_string_with_delimiter(string: str, delimiter: str) -> [str]:
         result.append(token)
 
     return result
+
+
+def currency_to_int(s: str) -> int:
+    """
+    Just remove a colon.
+    """
+    return int(s[:len(s)-3] + s[len(s)-2:])

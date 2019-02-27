@@ -13,8 +13,8 @@
     </div>
 </div>
 
-<p>Money spent (this month): {{ spending }} €</p>
-<p>Money earned (this month): {{ earnings }} €</p>
+<p>Spendings (this month): {{ spending }} €</p>
+<p>Income (this month): {{ income }} €</p>
 
 <table>
     <tr>
@@ -24,7 +24,7 @@
 {% for task in tasks %}
     <tr>
         <td>{{ task.description }}</td>
-        <td>{{ task.due_time }}</td>
+        <td class="time">{{ task.due_time|date:'d.m.Y – H:i' }}</td>
     </tr>
 {% endfor %}
 </table>
