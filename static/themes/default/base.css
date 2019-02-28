@@ -144,3 +144,7 @@ th {
 .time {
     font-family: 'courier', monospace;
 }
+
+table .id-col {
+    width: 10%;
+}

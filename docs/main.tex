@@ -26,6 +26,24 @@ then we can add an income by calling
 \begin{lstlisting}
 budget income <date> <amount> <type>
 \end{lstlisting}
+if the want to delete we type
+\begin{lstlisting}
+budget rm <income or spending> <id>
+\end{lstlisting}
+
+\subsection*{Spendings}
+To add a new spending, we need to have \texttt{ItemType} and \texttt{Item} stored in our database.
+We can add them with the following procedure:
+\begin{lstlisting}
+# First we add the item type such as 'groceries'.
+budget new-item-type <name>
+
+# Then we can add an item
+budget new-item <name> <type_name>
+
+# We can remove by typing
+budget rm spending <id>
+\end{lstlisting}
 
 \section{Tasks}
 To manage personal tasks we have app named ''tasks'', which is used as follows.
