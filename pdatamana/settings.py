@@ -129,6 +129,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    'static/css',
     '/var/www/static/',
     'static/themes/' + THEME_NAME
 ]

@@ -19,3 +19,7 @@ migrations/
 *.toc
 
 secret_key.txt
+
+# Static Generators
+*.map
+*.min.css

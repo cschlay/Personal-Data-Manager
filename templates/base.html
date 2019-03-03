@@ -12,37 +12,5 @@
 </head>
 
 <body>
-    {% if user.is_authenticated %}
-        <nav id="top-navigation" role="navigation">
-            <a id="brand" href="{% url 'index' %}">Datamana</a>
-            <a id="budget" href="{% url 'budget:budget' %}">Budget</a>
-            <a href="">Calendar</a>
-            <a href="">Keys</a>
-            <a id="library" href="{% url 'library' %}">Library</a>
-            <a href="">Projects</a>
-            <a id="recipes" href="{% url 'recipes' %}">Recipes</a>
-            <a href="">Tasks</a>
-            <a id="sign-out" href="{% url 'logout' %}">Sign out</a>
-        </nav>
-
-        <!-- Command-line Interface -->
-        <div id="cli" align="center">
-            <form method="post" action="{% url 'cli:cli' %}">
-                {% csrf_token %}
-                <input type="text" placeholder="Command-line Interface" name="command" autocomplete="off">
-            </form>
-        </div>
-
-        <!-- Sets the active link style.-->
-        <script>
-            var link = document.getElementById("{% block link-id %}{% endblock %}");
-            link.classList.add("active-link");
-        </script>
-    {% else %}
-        <div>
-            {% block main %}{% endblock %}
-        </div>
-        <main>{% block main_public %}{% endblock %}</main>
-    {% endif %}
 </body>
 </html>

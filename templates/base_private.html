@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.min.css' %}">
     {% block css %}{% endblock %}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -30,17 +31,23 @@
     </div>
 
     <!-- Command-line Interface -->
-    <div id="cli" align="center">
-        <form method="post" action="{% url 'cli:cli' %}">
-            {% csrf_token %}
-            <input type="text" placeholder="Command-line Interface" name="command" autocomplete="off">
-        </form>
+    <div id="cli">
+        <button id="cli-toggler" onclick="toggle()">CLI</button>
+        <div id="cli-inner">
+            <p id="cli-output"></p>
+            <form method="post" action="{% url 'cli:cli' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Command-line Interface" name="command" autocomplete="off">
+            </form>
+        </div>
     </div>
 
     <!-- Set the active link style.-->
     <script>
         document.getElementById("{% block link-id %}{% endblock %}").classList.add("active-link");
     </script>
+
+    <script type="text/javascript" src="{% static 'js/cli.js' %}"></script>
     {% else %}
     <h1>Permission denied.</h1>
     {% endif %}

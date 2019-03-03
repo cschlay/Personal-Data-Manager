@@ -1,0 +1,48 @@
+$bg-color: black;
+$text-color: orange;
+$font: courier;
+
+#cli-toggler {
+    border: 1px solid orange;
+    color: orange;
+    font-family: courier;
+    margin: 0;
+    padding: 0.25em;
+}
+
+#cli {
+    color: $text-color;
+    font-family: $font;
+    line-height: 1.5;
+
+    position: fixed;
+    bottom: 0;
+
+    margin: 1% 2.5%;
+    width: 95%;
+
+    input {
+        background-color: inherit;
+        color: $text-color;
+        font-family: inherit;
+        margin: 0.5em 0;
+        border: none;
+        outline: none;
+        width: 99%;
+        opacity: 0.8;
+    }
+
+    #cli-output {
+        border-bottom: 1px dashed gray;
+        padding: 0.25em 0.5em;
+        margin: 0;
+        max-height: 10em;
+        overflow: scroll;
+    }
+}
+
+#cli-inner {
+    background-color: $bg-color;
+    border: 1px solid $text-color;
+    padding: 0.5em 1em;
+ }

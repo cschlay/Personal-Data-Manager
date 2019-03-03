@@ -117,30 +117,6 @@ th {
     margin: 75px 5%;
 }
 
-#cli {
-    opacity: 0.8;
-
-    background-color: black;
-    border: 1px groove gray;
-
-    position: fixed;
-    bottom: 0;
-    width: 95%;
-    margin: 1% 2%;
-    padding: 10px;
-}
-
-#cli input {
-    background-color: black;
-    color: lightgreen;
-    font-family: courier;
-
-    border: none;
-    outline: none;
-    width: 100%;
-    opacity: 0.8;
-}
-
 .time {
     font-family: 'courier', monospace;
 }
