@@ -71,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611384940458</updated>
-      <workItem from="1611384941718" duration="1540000" />
+      <workItem from="1611384941718" duration="2307000" />
     </task>
     <task id="LOCAL−00001" summary="Change to use pipenv">
       <created>1611385218953</created>
@@ -97,7 +97,19 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1611386398376</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Fix gh actions">
+      <created>1611386506446</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1611386506446</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Fix gh actions">
+      <created>1611386580177</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1611386580177</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +131,7 @@
     <MESSAGE value="Add dotenv and django debug toolbar" />
     <MESSAGE value="Add coverage and testing" />
     <MESSAGE value="Add github actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add github actions" />
+    <MESSAGE value="Fix gh actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix gh actions" />
   </component>
 </project>
