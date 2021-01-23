@@ -13,10 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
 
-from apps import dashboard, budget, library, recipes
+from apps import library, recipes
+from pdatamana import settings
 
 urlpatterns = [
     # Administration
@@ -37,3 +39,6 @@ urlpatterns = [
     # Task App
     path('tasks/', include('apps.tasks.urls'))
 ]
+
+if settings.DEBUG:
+    urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
