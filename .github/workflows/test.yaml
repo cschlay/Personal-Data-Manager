@@ -7,6 +7,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      DEBUG: "0"
+      SECRET_KEY: "&duv3e64nxu3-(_#%$(h))oxfj)ax8(c0ltil!_q*$n_)lbmq9"
+
     steps:
     - uses: actions/checkout@v2
 
