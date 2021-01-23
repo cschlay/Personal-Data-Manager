@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb396779-0841-49b4-a4a7-87548f7e4021" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611384940458</updated>
-      <workItem from="1611384941718" duration="1425000" />
+      <workItem from="1611384941718" duration="1540000" />
     </task>
     <task id="LOCAL−00001" summary="Change to use pipenv">
       <created>1611385218953</created>
@@ -91,7 +91,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1611386132130</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Add github actions">
+      <created>1611386398376</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1611386398376</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +118,7 @@
     <MESSAGE value="Change to use pipenv" />
     <MESSAGE value="Add dotenv and django debug toolbar" />
     <MESSAGE value="Add coverage and testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add coverage and testing" />
+    <MESSAGE value="Add github actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add github actions" />
   </component>
 </project>
